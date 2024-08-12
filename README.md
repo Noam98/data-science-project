@@ -61,6 +61,7 @@ The positions chosen are: Goalkeeper, Left/Right back, Center back, Defensive mi
 
 ### processed data folder
 in this folder there is a file for each positions with 115 columns ready for cleaning and begining the project.
+- `combined.csv` - 3787 (all positions) 
 - `Back_players.csv` - 611 rows
 - `Centre-Back_players.csv` - 666 rows
 - `Defensive Midfield_players.csv` - 832 rows
