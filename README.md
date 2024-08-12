@@ -37,22 +37,38 @@ Because of that we will build a different prediction model for every position.
 <br>
 
 ## Dataset
+### kaggle raw data folder
 We use two different datasets, both are from Kaggle.
 For the players stats we use a dataset which contains data about players from the top 5 leagues in Europe (England, Spain, France, Italy and Germany).
 We have two of those, one for the season 2021/22, and one for 2022/23.
-- [2021-2022-football-player-stats.csv](https://www.kaggle.com/datasets/vivovinco/20212022-football-player-stats)
-- [2022-2023-football-player-stats.csv](https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats)
+- `2021-2022-football-player-stats.csv` - [Link](https://www.kaggle.com/datasets/vivovinco/20212022-football-player-stats)
+- `2022-2023-football-player-stats.csv` - [Link](https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats)
 
 Each of them has more than 2500 rows(players) and between 143-124 columns of attributes specified in the appendix.
 
 For the player's price valuation, we use this dataset:
-- [player-scores-prices.csv](https://www.kaggle.com/datasets/davidcariboo/player-scores)
+- `player-scores-prices.csv` - [Link](https://www.kaggle.com/datasets/davidcariboo/player-scores)
+
 
 It is an updating dataset, we are using two of the CSV's in it.
 One has a matching between a player and the player's id and position, the other has market valuations for every player id in different dates.
 We combined those datasets to 7 CSV's, each for every player position.
 In every table, each row represents a player in one of the seasons, and has as columns all of the numerical attributes (number) and the market value that season which is the target column.
 The positions chosen are: Goalkeeper, Left/Right back, Center back, Defensive midfielder, Attacking midfielder, Left/Right wing and Center forward. 
+
+- `players.csv` - [Link](https://www.kaggle.com/datasets/davidcariboo/player-scores?select=players.csv) (this file is just for indexing players names to their id)
+
+
+### processed data folder
+in this folder there is a file for each positions with 115 columns ready for cleaning and begining the project.
+- `Back_players.csv` - 611 rows
+- `Centre-Back_players.csv` - 666 rows
+- `Defensive Midfield_players.csv` - 832 rows
+- `Centre-Forward_players.csv` - 574 rows
+- `Winger_players.csv` - 536 rows
+- `Goalkeeper_players.csv` - 253 rows
+- `Attacking Midfield_players.csv` - 314 rows
+
 <br>
 <br>
 
