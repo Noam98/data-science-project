@@ -1,7 +1,7 @@
 # Analyzing European Football Player's Stats 
 ### A Data Science Project Proposal
 
-#### **Contributors** : Noam David - 314803628, Yaniv Simmer - 206328817
+#### **Contributors** : `Noam David` - 314803628, `Yaniv Simmer` - 206328817
 <br>
 
 
@@ -10,7 +10,8 @@
 The football economy is blooming. Players are bought by European clubs for tens of millions of dollars every year.
 Also, in the recent years, football went through a major data revolution. Every little action that a player does is measured and well documented, leading to an efficient tool for analyzing a player's performance.
 We chose to use some of this data to try to predict a player's value according to the data collected about him.
-
+<br>
+<br>
 
 
 ## Research Question
@@ -21,7 +22,8 @@ Full description on the attributes is added as an appendix.
 We assume that the attributes relevant to a player differ by his position, for example the goals scored by the player are not relevant if the player is a goalkeeper, but they sure are meaningful if he is a striker.
 Because of that we will build a different prediction model for every position.
 
-
+<br>
+<br>
 
 ## Research Question
 Our research will focus on predicting a player's value by the data collected on him that season.
@@ -31,10 +33,8 @@ Full description on the attributes is added as an appendix.
 We assume that the attributes relevant to a player differ by his position, for example the goals scored by the player are not relevant if the player is a goalkeeper, but they sure are meaningful if he is a striker.
 Because of that we will build a different prediction model for every position.
 
-
-
-
-
+<br>
+<br>
 
 ## Dataset
 We use two different datasets, both are from Kaggle.
@@ -42,15 +42,19 @@ For the players stats we use a dataset which contains data about players from th
 We have two of those, one for the season 2021/22, and one for 2022/23.
 - [2021-2022-football-player-stats.csv](https://www.kaggle.com/datasets/vivovinco/20212022-football-player-stats)
 - [2022-2023-football-player-stats.csv](https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats)
-Each of them has more than 2500 rows(players) and 143 columns of attributes specified in the appendix.
+
+Each of them has more than 2500 rows(players) and between 143-124 columns of attributes specified in the appendix.
 
 For the player's price valuation, we use this dataset:
 - [player-scores-prices.csv](https://www.kaggle.com/datasets/davidcariboo/player-scores)
+
 It is an updating dataset, we are using two of the CSV's in it.
 One has a matching between a player and the player's id and position, the other has market valuations for every player id in different dates.
 We combined those datasets to 7 CSV's, each for every player position.
 In every table, each row represents a player in one of the seasons, and has as columns all of the numerical attributes (number) and the market value that season which is the target column.
 The positions chosen are: Goalkeeper, Left/Right back, Center back, Defensive midfielder, Attacking midfielder, Left/Right wing and Center forward. 
+<br>
+<br>
 
 
 ## Methods:
@@ -61,6 +65,8 @@ To make sure our prediction is good enough, we will consider the R2, and compare
 Finally, we will look for the most contributing variables to predict the market value, by looking at the p-values.
 
 
+<br>
+<br>
 
 
 
@@ -69,10 +75,11 @@ Finally, we will look for the most contributing variables to predict the market 
 To get started with the project, clone the repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/football-stats-analysis.git
+git clone https://github.com/yaniv-simmer/data-science-project.git
 cd football-stats-analysis
-pip install -r requirements.txt
 ```
+<br>
+<br>
 
 ## Appendix: 
 Columns' descriptions are listed below.
