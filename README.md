@@ -49,7 +49,7 @@ The positions chosen are: Goalkeeper, Left/Right back, Center back, Defensive mi
 
 
 ### processed data folder
-in this folder there is a file for each positions with 115 columns ready for cleaning and begining the project.
+In this folder there is a file for each position with 115 columns ready for cleaning and begining the project.
 - `combined.csv` - 3787 (all positions) 
 - `Back_players.csv` - 611 rows
 - `Centre-Back_players.csv` - 666 rows
@@ -59,7 +59,7 @@ in this folder there is a file for each positions with 115 columns ready for cle
 - `Goalkeeper_players.csv` - 253 rows
 - `Attacking Midfield_players.csv` - 314 rows
 
-Heres the ChatGPT convesation that helps to write the code in `extract_data.py` - [Link](https://chatgpt.com/share/4e31e197-c0f5-4f90-b2b0-27f1d4f59815)
+Here's the ChatGPT conversation that helped to write the code in `extract_data.py` - [Link](https://chatgpt.com/share/4e31e197-c0f5-4f90-b2b0-27f1d4f59815)
 <br>
 <br>
 
