@@ -5,32 +5,20 @@
 <br>
 
 
-
 ## Preface
-The football economy is blooming. Players are bought by European clubs for tens of millions of dollars every year.
-Also, in the recent years, football went through a major data revolution. Every little action that a player does is measured and well documented, leading to an efficient tool for analyzing a player's performance.
+The football economy is blooming. Players are bought by European clubs for tens of millions of dollars every year.<br>
+Also, in the recent years, football went through a major data revolution. Every little action that a player does is measured and well documented, leading to an efficient tool for analyzing a player's performance.<br>
 We chose to use some of this data to try to predict a player's value according to the data collected about him.
-<br>
-<br>
-
-
-## Research Question
-Our research will focus on predicting a player's value by the data collected on him that season.
-The German website Transfermarkt.com is the leading source for evaluating a player's value, we will use their valuations as the target variable to test our predictions.
-We will rely on the data gathered by FBref.com (Football Reference), the attributes are age, average minutes per game, goals, shots on goal, interceptions, distance covered etc.
-Full description on the attributes is added as an appendix.
-We assume that the attributes relevant to a player differ by his position, for example the goals scored by the player are not relevant if the player is a goalkeeper, but they sure are meaningful if he is a striker.
-Because of that we will build a different prediction model for every position.
 
 <br>
 <br>
 
 ## Research Question
-Our research will focus on predicting a player's value by the data collected on him that season.
-The German website [Transfermarkt](https://www.transfermarkt.com/) is the leading source for evaluating a player's value, we will use their valuations as the target variable to test our predictions.
-We will rely on the data gathered by [FBref.com](https://fbref.com/) (Football Reference), the attributes are age, average minutes per game, goals, shots on goal, interceptions, distance covered etc.
-Full description on the attributes is added as an appendix.
-We assume that the attributes relevant to a player differ by his position, for example the goals scored by the player are not relevant if the player is a goalkeeper, but they sure are meaningful if he is a striker.
+Our research will focus on predicting a player's value by the data collected on him that season.<br>
+The German website [Transfermarkt](https://www.transfermarkt.com/) is the leading source for evaluating a player's value, we will use their valuations as the target variable to test our predictions.<br>
+We will rely on the data gathered by [FBref.com](https://fbref.com/) (Football Reference), the attributes are age, average minutes per game, goals, shots on goal, interceptions, distance covered etc.<br>
+Full description on the attributes is added as an appendix.<br>
+We assume that the attributes relevant to a player differ by his position, for example the goals scored by the player are not relevant if the player is a goalkeeper, but they sure are meaningful if he is a striker.<br>
 Because of that we will build a different prediction model for every position.
 
 <br>
@@ -38,7 +26,8 @@ Because of that we will build a different prediction model for every position.
 
 ## Dataset
 ### kaggle raw data folder
-We use two different datasets, both are from Kaggle.
+We use two different datasets, both are from Kaggle.<br>
+
 For the players stats we use a dataset which contains data about players from the top 5 leagues in Europe (England, Spain, France, Italy and Germany).
 We have two of those, one for the season 2021/22, and one for 2022/23.
 - `2021-2022-football-player-stats.csv` - [Link](https://www.kaggle.com/datasets/vivovinco/20212022-football-player-stats)
@@ -50,10 +39,10 @@ For the player's price valuation, we use this dataset:
 - `player-scores-prices.csv` - [Link](https://www.kaggle.com/datasets/davidcariboo/player-scores)
 
 
-It is an updating dataset, we are using two of the CSV's in it.
-One has a matching between a player and the player's id and position, the other has market valuations for every player id in different dates.
+It is an updating dataset, we are using two of the CSV's in it.<br>
+One has a matching between a player and the player's id and position, the other has market valuations for every player id in different dates.<br>
 We combined those datasets to 7 CSV's, each for every player position.
-In every table, each row represents a player in one of the seasons, and has as columns all of the numerical attributes (number) and the market value that season which is the target column.
+In every table, each row represents a player in one of the seasons, and has as columns all of the numerical attributes (115) and the market value that season which is the target column.<br>
 The positions chosen are: Goalkeeper, Left/Right back, Center back, Defensive midfielder, Attacking midfielder, Left/Right wing and Center forward. 
 
 - `players.csv` - [Link](https://www.kaggle.com/datasets/davidcariboo/player-scores?select=players.csv) (this file is just for indexing players names to their id)
@@ -76,10 +65,10 @@ Heres the ChatGPT convesation that helps to write the code in `extract_data.py` 
 
 
 ## Methods:
-We will start with exploratory data analysis, in which we will look for missing values and columns that do not look right by plotting the data and comparing the min/max values to the mean and standard deviation, while saving 20% of the data for testing.
-Then we will perform PCA to reduce dimensions by looking for correlating variables and observing at the variables factor map.
-We will fit a regression model for every position to predict the market value of the player that season using cross-validation.
-To make sure our prediction is good enough, we will consider the R2, and compare our predictions on the test cases with the actual market value and look at the error.
+We will start with exploratory data analysis, in which we will look for missing values and columns that do not look right by plotting the data and comparing the min/max values to the mean and standard deviation, while saving 20% of the data for testing.<br>
+Then we will perform PCA to reduce dimensions by looking for correlating variables and observing at the variables factor map.<br>
+We will fit a regression model for every position to predict the market value of the player that season using cross-validation.<br>
+To make sure our prediction is good enough, we will consider the R2, and compare our predictions on the test cases with the actual market value and look at the error.<br>
 Finally, we will look for the most contributing variables to predict the market value, by looking at the p-values.
 
 
