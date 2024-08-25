@@ -10,6 +10,7 @@ The football economy is blooming. Players are bought by European clubs for tens 
 Also, in the recent years, football went through a major data revolution. Every little action that a player does is measured and well documented, leading to an efficient tool for analyzing a player's performance.<br>
 We chose to use some of this data to try to predict a player's value according to the data collected about him.
 
+
 <br>
 <br>
 
