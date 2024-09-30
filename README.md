@@ -249,6 +249,8 @@ It did not improved the error (although it reduced computing time) but we did le
 
 ### Most significant attributes
 the most significant attributes widely varries between the diffrent positions, as expected.
+We looked at the most significant attributes for the random forest decision making, and saw that they make sense for the position we look at.<br>
+These are the top 5 most significant attributes for every position:<br>
 
 `Attacking Midfield_players`
 - Goals scored or allowed
