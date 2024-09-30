@@ -1,9 +1,19 @@
 # Analyzing European Football Player's Stats 
-### A Data Science Project Proposal
 
 #### **Contributors** : `Noam David` - 314803628, `Yaniv Simmer` - 206328817
+
 <br>
 
+## Table of Contents
+- [Project Proposal](#a-data-science-project-proposal)
+- [Cleaning and Predicting](#cleaning-and-predicting)
+
+
+
+<br>
+<br>
+
+# Project Proposal
 
 ## Preface
 The football economy is blooming. Players are bought by European clubs for tens of millions of dollars every year.<br>
@@ -215,3 +225,82 @@ Columns' descriptions are listed below.
 - AerWon : Aerials won
 - AerLost : Aerials lost
 - AerWon% : Percentage of aerials won
+
+
+
+
+# Cleaning and Predicting
+
+## Proccesing
+In the `clean_and_modeling.ipynb` there are the following steps:
+### Data cleaning 
+we first plotted each column to look for outliers, we examined each one of them and decided if it makes sense. If we concluded that the outlier is a mistake, we replaced it with the mean or just removed it.
+### Linear model
+we fitted a linear regression model to each position dataset, predicted the price valuation for each player in the test datasets and then examined the result of the model by the R^2 and mostly by the average absolute error and it varied between 39% to 68% of explained variance.<br>
+The error ranged from 8-13 million Euros, and the error for goalkeepers was around 45 million, maybe because a lack of relevant data about goalkeepers.
+### Random forest
+Because of the high error and the low R^2 we tried to use a different, non linear regressor such as random forest, maybe the connection is not linear.
+The errors are now between 6.5 and 8.5 million euros, goalkeepers also being in that range.
+### PCA
+We tried to improve the model by reducing dimensions, because there are a lot of attributes (115).<br>
+The PCA was done first by perserving 0.95% of the variance, but we saw that we have 1-2 components for each model so we tried to perserve more variance.<br>
+When we reach 0.999% we stayed with a reasonable amount of components, not more than 10.<br>
+It did not improved the error (although it reduced computing time) but we did learn that most of the information in out data is irrelevant.
+
+### Most significant attributes
+the most significant attributes widely varries between the diffrent positions, as expected.
+
+`Attacking Midfield_players`
+- Goals scored or allowed
+- Minutes played
+- Completed pass sent between back defenders into open space
+- Goal-creating actions
+- Touches in attacking penalty area
+
+`Back_players`
+- Passes completed (Passes between 5 and 15 yards)
+- Passes attempted from free kicks
+- Passes attempted (Passes between 5 and 15 yards)
+- Matches started
+- Player's age
+
+`Centre-Back_players`
+- Passes completed
+- Minutes played divided by 90
+- Passes completed
+- Passes completed (Passes between 15 and 30 yards)
+- Goals scored or allowed
+
+`Centre-Forward_players`
+- Goals scored or allowed
+- Number of players tackled plus number of interceptions
+- Touches in attacking penalty area
+- Number of players tackled
+- Carries into the 18-yard box
+
+
+`Defensive Midfield_players`
+- Passes completed (Passes between 5 and 15 yards)
+- Minutes played
+- Percentage of aerials won
+- Fouls committed
+- Player's age
+
+`Goalkeeper_players`
+- Pass completion percentage
+- Minutes played
+- Minutes played divided by 90
+- Player's age
+- Passes attempted from free kicks
+
+`Winger_players`
+- Goals scored or allowed
+- Touches in attacking penalty area
+- Touches in attacking 1/3 
+- Completed passes that move the ball towards the opponent's goal at least 10 yards from its furthest point in the last six passes, or any completed pass into the penalty area
+- Carries into the 18-yard box
+
+### Conclusions and final thoughts
+There is a connection between the data and the price valuations, but the prediction is off by around 7 million while a player's price is ranging up to 170 million with a median around 5 million.<br>
+We think that in the circumstances of the data we have it is a fairly reasonable error even though it is pretty high for making actual and professional predictions.<br>
+We assume that more data such as track of a player from more seasons, medical record, social profile, or popularity would improve the prediction.<br>
