@@ -306,3 +306,10 @@ These are the top 5 most significant attributes for every position:<br>
 There is a connection between the data and the price valuations, but the prediction is off by around 7 million while a player's price is ranging up to 170 million with a median around 5 million.<br>
 We think that in the circumstances of the data we have it is a fairly reasonable error even though it is pretty high for making actual and professional predictions.<br>
 We assume that more data such as track of a player from more seasons, medical record, social profile, or popularity would improve the prediction.<br>
+
+
+### chat-GPT usage:
+- [chat](https://chatgpt.com/share/66fae967-bddc-8005-887d-6d87ebd9c6db)
+- [chat](https://chatgpt.com/share/66fae97f-d700-8005-bc12-5719b04c2b58)
+- [chat](https://chatgpt.com/share/66fae98e-b124-8005-97be-9237fc7ee39b)
+- [chat](https://chatgpt.com/share/66fae99c-93b8-8005-a2a8-08ee9141d0bc)
